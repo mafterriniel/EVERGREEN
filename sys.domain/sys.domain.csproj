@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C985641-9D1C-403F-913B-7F62A489D13E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sys.domain</RootNamespace>
+    <AssemblyName>sys.domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditTrails\AuditTrails.cs" />
+    <Compile Include="Classes\capture_image.cs" />
+    <Compile Include="Classes\crypter.cs" />
+    <Compile Include="Classes\custom_culture.cs" />
+    <Compile Include="Classes\access_verification.cs" />
+    <Compile Include="EF_expressions\EF_expression.cs" />
+    <Compile Include="Enums\enums.cs" />
+    <Compile Include="LinqKit\ExpandableQuery.cs" />
+    <Compile Include="LinqKit\ExpressionExpander.cs" />
+    <Compile Include="LinqKit\ExpressionVisitor.cs" />
+    <Compile Include="LinqKit\Extensions.cs" />
+    <Compile Include="LinqKit\Linq.cs" />
+    <Compile Include="LinqKit\PredicateBuilder.cs" />
+    <Compile Include="Models\adm\Actions.cs" />
+    <Compile Include="Models\adm\Logs.cs" />
+    <Compile Include="Models\adm\permissions.cs" />
+    <Compile Include="Models\adm\Roles.cs" />
+    <Compile Include="Models\adm\Users.cs" />
+    <Compile Include="Models\dbs\Checkers.cs" />
+    <Compile Include="Models\dbs\Origins.cs" />
+    <Compile Include="Models\dbs\Category.cs" />
+    <Compile Include="Models\dbs\Clients.cs" />
+    <Compile Include="Models\dbs\Raw_material.cs" />
+    <Compile Include="dal\connection_string.cs" />
+    <Compile Include="dal\DBContext.cs" />
+    <Compile Include="Models\dbs\Drivers.cs" />
+    <Compile Include="Models\trns\tracker_time.cs" />
+    <Compile Include="Models\trns\Trashed.cs" />
+    <Compile Include="Procedures\procedures.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\dbs\Stations.cs" />
+    <Compile Include="Models\trns\Ref_no.cs" />
+    <Compile Include="Models\trns\Transactions.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsClass\ReportsClass.cs" />
+    <Compile Include="ReportsDataSource\ReportsDataSource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportsDataSource.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsDataSource\tkt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tkt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportsFile\gen.cs">
+      <DependentUpon>gen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ReportsFile\tkt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tkt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportsFile\tracker.cs">
+      <DependentUpon>tracker.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Validation\RefnoValidation.cs" />
+    <Compile Include="Validation\OriginsValidation.cs" />
+    <Compile Include="Validation\ClientsValidation.cs" />
+    <Compile Include="Validation\MaterialsValidation.cs" />
+    <Compile Include="Validation\TransactionValidation.cs" />
+    <Compile Include="Validation\UsersValidation.cs" />
+    <Compile Include="ViewModels\LogsViewModel.cs" />
+    <Compile Include="ViewModels\OriginsViewModel.cs" />
+    <Compile Include="ViewModels\MaterialsViewModel.cs" />
+    <Compile Include="ViewModels\ClientsViewModel.cs" />
+    <Compile Include="ViewModels\TransactionViewModels.cs" />
+    <Compile Include="ViewModels\UsersViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportsDataSource\ReportsDataSource.xsc">
+      <DependentUpon>ReportsDataSource.xsd</DependentUpon>
+    </None>
+    <None Include="ReportsDataSource\ReportsDataSource.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportsDataSource.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportsDataSource\ReportsDataSource.xss">
+      <DependentUpon>ReportsDataSource.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\General Classes\cl2_g3n%40\cl2_g3n%40.vbproj">
+      <Project>{bf053453-fa1d-4132-b666-3c844d2b151f}</Project>
+      <Name>cl2_g3n%40</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework.Design\MetroFramework.Design.csproj">
+      <Project>{7316584d-9a16-4280-a8ab-6d45198c6e4d}</Project>
+      <Name>MetroFramework.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework.Fonts\MetroFramework.Fonts.csproj">
+      <Project>{5a2fcae8-c2fa-41bd-90ea-16103ea07b26}</Project>
+      <Name>MetroFramework.Fonts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
+      <Project>{bb41ac8b-cbed-4387-a7e0-4567edb3f57f}</Project>
+      <Name>MetroFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Settings File\cl2_init\cl2_init.vbproj">
+      <Project>{7c5da74e-9a35-4a43-a1b7-6e39d4d0e624}</Project>
+      <Name>cl2_init</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ReportsDataSource\tkt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>tkt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsFile\gen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsFile\tkt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>tkt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsFile\tracker.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>tracker.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

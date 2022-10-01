@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22734C6B-6D2B-48F1-A8FE-70D3D153EC71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weighing_System_v._1c._0</RootNamespace>
+    <AssemblyName>Weighing_System_v.1c.0</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>terriniel Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clock">
+      <HintPath>..\..\..\..\Testing Programs\clock\bin\Debug\clock.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MykeCtrlEx">
+      <HintPath>D:\Dir\Terriniel Scales System\UPPC\Phase 3\UPPC PHASE 3\PRG_TMP\bin\Debug\MykeCtrlEx.dll</HintPath>
+    </Reference>
+    <Reference Include="spc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Testing Programs\Vivotek camera\real time camera viewer\WinFormsSources\StreamPlayerDemo\StreamPlayerDemo\bin\Release\spc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeightDev">
+      <HintPath>..\..\..\TSI STANDARD VBNET\PRG_TMP\bin\Debug\WeightDev.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cls\global.cs" />
+    <Compile Include="IClass\IForm.cs" />
+    <Compile Include="CustomMetroButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IClass\IDb_m.cs" />
+    <Compile Include="IClass\IPaging.cs" />
+    <Compile Include="mfrTrns_codes.cs" />
+    <Compile Include="mfr\trns\mfr_rprnt_tkt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_rprnt_tkt.Designer.cs">
+      <DependentUpon>mfr_rprnt_tkt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_xls_stat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_xls_stat.Designer.cs">
+      <DependentUpon>mfr_xls_stat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_OK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_OK.Designer.cs">
+      <DependentUpon>mfr_OK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\stp\mfr_sttngs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\stp\mfr_sttngs.Designer.cs">
+      <DependentUpon>mfr_sttngs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\db\mfr_org.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\db\mfr_org.Designer.cs">
+      <DependentUpon>mfr_org.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\admn\mfr_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\admn\mfr_admin.Designer.cs">
+      <DependentUpon>mfr_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\admn\mfr_usrs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\admn\mfr_usrs.Designer.cs">
+      <DependentUpon>mfr_usrs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_vtrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_vtrans.Designer.cs">
+      <DependentUpon>mfr_vtrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_trans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\trns\mfr_trans.Designer.cs">
+      <DependentUpon>mfr_trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\db\mfr_clnts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\db\mfr_clnts.Designer.cs">
+      <DependentUpon>mfr_clnts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr\db\mfr_mate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr\db\mfr_mate.Designer.cs">
+      <DependentUpon>mfr_mate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mfr_mn2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mfr_mn2.Designer.cs">
+      <DependentUpon>mfr_mn2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="mfr\trns\mfr_rprnt_tkt.resx">
+      <DependentUpon>mfr_rprnt_tkt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\trns\mfr_xls_stat.resx">
+      <DependentUpon>mfr_xls_stat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\trns\mfr_OK.resx">
+      <DependentUpon>mfr_OK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\stp\mfr_sttngs.resx">
+      <DependentUpon>mfr_sttngs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\db\mfr_org.resx">
+      <DependentUpon>mfr_org.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\admn\mfr_admin.resx">
+      <DependentUpon>mfr_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\admn\mfr_usrs.resx">
+      <DependentUpon>mfr_usrs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\trns\mfr_vtrans.resx">
+      <DependentUpon>mfr_vtrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\trns\mfr_trans.resx">
+      <DependentUpon>mfr_trans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\db\mfr_clnts.resx">
+      <DependentUpon>mfr_clnts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr\db\mfr_mate.resx">
+      <DependentUpon>mfr_mate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mfr_mn2.resx">
+      <DependentUpon>mfr_mn2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\sys.domain.DB_TABLES.Categories.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mfr\mgmt\" />
+    <Folder Include="mfr\rpts\" />
+    <Folder Include="mods\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigiD\DigiD\DigiD.csproj">
+      <Project>{28cc563a-7857-48e5-a24f-8b70ace59775}</Project>
+      <Name>DigiD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExcelExport\ExcelExport.csproj">
+      <Project>{638a54aa-1b41-416d-8578-965241267532}</Project>
+      <Name>ExcelExport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General Classes\cl2_g3n%40\cl2_g3n%40.vbproj">
+      <Project>{bf053453-fa1d-4132-b666-3c844d2b151f}</Project>
+      <Name>cl2_g3n%40</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework.Design\MetroFramework.Design.csproj">
+      <Project>{7316584d-9a16-4280-a8ab-6d45198c6e4d}</Project>
+      <Name>MetroFramework.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework.Fonts\MetroFramework.Fonts.csproj">
+      <Project>{5a2fcae8-c2fa-41bd-90ea-16103ea07b26}</Project>
+      <Name>MetroFramework.Fonts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
+      <Project>{bb41ac8b-cbed-4387-a7e0-4567edb3f57f}</Project>
+      <Name>MetroFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Settings File\cl2_init\cl2_init.vbproj">
+      <Project>{7c5da74e-9a35-4a43-a1b7-6e39d4d0e624}</Project>
+      <Name>cl2_init</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sys.domain\sys.domain.csproj">
+      <Project>{6c985641-9d1c-403f-913b-7f62a489d13e}</Project>
+      <Name>sys.domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\reporting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\administration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.navigate.previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.home.empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1474536810_Streamline-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_arrow_back_48px-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_arrow_back_48px-1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.arrow.left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.home2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.home3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\day_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TSI LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="terriniel Logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+*/**/bin/*
+*/**/bin/*
+*/**/bin/release
+*/**/bin/x64/release
+*/**/bin/x86/release
+*/**/obj/*
+*/**/obj/*
+/packages
+/Weighing System v3.5
